@@ -13,9 +13,17 @@ body {
   
   .headline {
     background: linear-gradient(90deg, #020234, #054602);
-    padding: 2rem;
-    border-radius: 25px;
-    color: white;
+    padding:2rem;
+    border-radius:25px;
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    max-width: 50%;
+    margin:0 auto;
+    margin-bottom:20px;
+    
   }
   
   /* Color Boxes */
