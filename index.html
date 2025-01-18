@@ -3,71 +3,116 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Card Design using box shadow and hover effect</title>
+    <title>CSS Positioning Tutorial</title>
     <style>
-      body {
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
+      * {
         margin: 0;
-        background: #ffffff;
-        font-family: sans-serif;
-      }
-      .card {
-        width: 500px;
-        border-radius: 1rem;
-        box-shadow: 10px 10px 20px green, -10px -10px 10px red;
-        transition: transform 0.3s;
-        cursor: pointer;
-      }
-      .card:hover{
-        transform:translateY(-1rem)
-
+        padding: 0;
+        box-sizing: border-box;
       }
 
-      .card img {
-        width: 100%;
-        height: 500px;
-        object-fit: cover;
-        display: block;
-        border-radius: 10px 10px 0px 0px;
+      body {
+        font-family: Arial, sans-serif;
+        min-height: 200vh;
+        padding: 20px;
       }
-      .card-content{
-        padding:1.5rem;
+
+      .container {
+        background: #f0f0f0;
+        border: 3px dotted #333;
+        padding: 20px;
+        height: 600px;
+        position: relative;
+        overflow: auto;
       }
-      .card-title{
-        margin:0 0 0.5rem;
-        color:blue;
-        font-size:1.5rem;
-        display:flex;
+
+      .box {
+        width: 100px;
+        height: 100px;
+        color: white;
+        font-weight: bold;
+        font-size: 25px;
+        display: flex;
+        align-items: center;
         justify-content: center;
-
-
-      }
-      .card-text{
-        margin:0;
-        color:rgb(59, 58, 58);
-        line-height:1.5;
+        text-align: center;
+        padding: 4rem;
       }
 
+      /* Box 1: Static (default) */
+      .static-box {
+        background: #160286;
+      }
 
+      /* Box 2: Relative */
+      .relative-box {
+        background: rgb(3, 108, 3);
+        position: relative;
+        /* Uncomment during demo:
+            left: 50px;
+            top: 50px;
+            */
+      }
 
+      /* Box 3: Absolute */
+      .absolute-box {
+        background: #e74c3c;
+        position: absolute;
+        top:0px;
+        right:0px;
+      }
+
+      /* Box 4: Fixed */
+      .fixed-box {
+        background: #927504;
+        position: fixed;
+        bottom:40px;
+        right:0;
+      
+      }
+
+      /* Box 5: Sticky */
+      .sticky-box {
+        background: #9b59b6;
+        position: sticky;
+        top: 20px;
+      }
+
+      /* Space for demonstrating scroll */
+      .scroll-space {
+        height: 400px;
+        background: linear-gradient(#fff, #ddd);
+        margin-top: 20px;
+      }
     </style>
   </head>
-
   <body>
-    <div class="card">
-      <img
-        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/4a/95/ac/pashupatinath-is-the.jpg?w=1200&h=1200&s=1"
-        alt="Pashupatinath Temple"
-      />
+    <h1>CSS Positioning Tutorial-सजिलो तरीका</h1>
 
-      <div class="card-content">
-        <h2 class="card-title">Pashupatinath Temple</h2>
-        <p class="card-text">
-          Pashupatinath temple is the center of attraction of more than 4
-          billion hindus they live all over the world.
-        </p>
+    <div class="container">
+      <div class="box static-box">Static</div>
+
+      <div class="box relative-box">Relative</div>
+
+      <div class="box absolute-box">Absolute</div>
+
+      <div class="box fixed-box">Fixed</div>
+
+      <div class="box sticky-box">Sticky</div>
+
+      <div class="scroll-space">
+        <h2
+          style="
+            margin-top: 95px;
+            background-color: black;
+            color: white;
+            border-radius: 15px;
+            padding: 10px;
+            text-align: center;
+          "
+        >
+          Scroll to see sticky behavior
+        </h2>
       </div>
     </div>
   </body>
